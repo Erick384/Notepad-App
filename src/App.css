@@ -1,12 +1,17 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   margin: 20px;
   background-color: lightgrey;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 .app-container {
@@ -23,7 +28,8 @@ body {
 
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(4 , 19.5vw);
   grid-auto-rows: minmax(250px, auto);
   gap: 20px;
 }
