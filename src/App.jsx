@@ -66,6 +66,19 @@ function App() {
     setSelectedNote(null);
   };
 
+
+  // Function to delete a note
+  const deleteNote = function(event, noteId) {
+    event.stopPropagation();
+  
+    const updatedNotes = notes.filter(function(note) {
+      return note.id !== noteId;
+    });
+  
+    setNotes(updatedNotes);
+  };
+  
+
   return (
     <div className="app-container">
       <form
@@ -105,7 +118,7 @@ function App() {
             onClick={() => handleNoteClick(note)}
           >
             <div className="notes-header">
-              <button>x</button>
+              <button onClick={(event) => deleteNote(event, note.id)}>x</button>
             </div>
             <h2>{note.title}</h2>
             <p>{note.content}</p>
