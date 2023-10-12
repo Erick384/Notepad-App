@@ -33,6 +33,22 @@ body {
   grid-auto-rows: minmax(250px, auto);
   gap: 20px;
 }
+@media (max-width: 600px) {
+  body{
+    width: fit-content;
+  }
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .notes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 
 .note-item {
   display: flex;
